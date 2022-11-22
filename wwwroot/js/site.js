@@ -4,7 +4,13 @@
 // Write your JavaScript code.
 
 $(document).ready(function () {
-    $('#table-contatos').DataTable({
+    getTable('#table-contatos')
+    getTable('#table-usuarios')
+    
+});
+
+function getTable(id) {
+    $(id).DataTable({
         "ordering": true,
         "paging": true,
         "searching": true,
@@ -32,7 +38,8 @@ $(document).ready(function () {
             }
         }
     });
-});
+
+}
 
 $('.close-alert').click(() => {
     $('.alert').hide('hide');
