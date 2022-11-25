@@ -52,5 +52,37 @@ namespace ControleDeContatos.Controllers
 
 
         }
+
+        public IActionResult ApagarConfirmacao(int id)
+        {
+            var user = _usuarioRepositorio.BuscarPorId(id);
+            if(user == null)
+            {
+                TempData["MensagemErro"] = $"Ops, não conseguimos encontrar o usuário especificado. Tente novamente.";
+                return View("Index");
+            }
+            return View(user);
+
+        }
+
+        public IActionResult Apagar(int id)
+        {
+            try
+            {
+                _usuarioRepositorio.Apagar(id);
+                TempData["MensagemSucesso"] = "Usuário deletado com sucesso.";
+                return RedirectToAction("Index");
+
+            }
+            catch (System.Exception erro)
+            {
+                TempData["MensagemErro"] = $"Houve um erro ao deletar o usuário. Erro:{erro}";
+                return RedirectToAction("Index");
+
+            }
+
+
+
+        }
     }
 }
