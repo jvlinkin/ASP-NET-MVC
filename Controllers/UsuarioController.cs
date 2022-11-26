@@ -49,9 +49,47 @@ namespace ControleDeContatos.Controllers
                 return RedirectToAction("Index");
             }
 
-
-
         }
+
+        public IActionResult Editar(int id)
+        {
+            UsuarioModel usuario = _usuarioRepositorio.BuscarPorId(id);
+            return View(usuario);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(UsuarioSemSenhaModel usuarioSemSenhaModel)
+        {
+            try
+            {
+                UsuarioModel usuario = null;
+                if (ModelState.IsValid)
+                {
+                    usuario = new UsuarioModel()
+                    {
+                        Id = usuarioSemSenhaModel.Id,
+                        Nome = usuarioSemSenhaModel.Nome,
+                        Login = usuarioSemSenhaModel.Login,
+                        Email = usuarioSemSenhaModel.Email,
+                        Perfil = usuarioSemSenhaModel.Perfil
+                    };
+
+
+                    usuario = _usuarioRepositorio.Atualizar(usuario);
+                    TempData["MensagemSucesso"] = "Usuário atualizado com sucesso.";
+                    return RedirectToAction("Index");
+                }
+               
+                return View(usuario);
+
+            }
+            catch (Exception erro)
+            {
+                TempData["MensagemErro"] = $"Houve um erro ao atualizar o usuáro. Tente novamente. Erro:{erro}";
+                return RedirectToAction("Index");
+            }
+        }
+
 
         public IActionResult ApagarConfirmacao(int id)
         {

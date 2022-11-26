@@ -1,15 +1,16 @@
 ﻿@model UsuarioModel
 @{
     @using ControleDeContatos.Enums;
-    ViewData["Title"] = "Criar usuário";
+    ViewData["Title"] = "Editar usuário";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Cadastrar usuário</h1>
+    <h1 class="display-4">Editar usuário</h1>
     
 </div>
 
-<form asp-controller="Usuario" asp-action="Criar" method="post">
+<form asp-controller="Usuario" asp-action="Editar" method="post">
+    <input type="hidden" asp-for="Id" />
 
     <div class="mb-3">
         <label for="nome" class="form-label">Nome</label>
@@ -28,17 +29,12 @@
         <input type="text" asp-for="Login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o login do usuário">
         @Html.ValidationMessageFor(x => x.Login)
     </div>
-
-    <div class="mb-3">
-        <label for="login" class="form-label">Digite a senha do usuário</label>
-        <input type="password" asp-for="Senha" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite a senha do usuário">
-        @Html.ValidationMessageFor(x => x.Senha)
-    </div>
+        
 
     <div class="mb-3">
         <label for="login" class="form-label">Perfil</label>
         <select class="form-control" asp-for="Perfil">
-            <option value="0">Selecione</option>
+            <option value="">Selecione</option>
             <option value="@PerfilEnum.Admin">Administrador</option>
             <option value="@PerfilEnum.Padrao">Padrão</option>
         </select>
@@ -50,7 +46,7 @@
 
 
 
-    <button type="submit" class="btn btn-primary btn-block">Criar</button>
+    <button type="submit" class="btn btn-primary btn-block">Editar</button>
     <a class="btn btn-secondary btn-block" asp-controller="Usuario" asp-action="Index" role="button">Voltar</a>
 </form>
 
