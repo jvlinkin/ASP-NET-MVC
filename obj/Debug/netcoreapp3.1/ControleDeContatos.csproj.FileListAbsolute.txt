@@ -390,3 +390,5 @@ C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeC
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Criar.cshtml.g.cs
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ApagarConfirmacao.cshtml.g.cs
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Editar.cshtml.g.cs
+C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutDeslogado.cshtml.g.cs
