@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ControleDeContatos.Helper
 {
-    interface ISessao
+    public interface ISessao
     {
         void CriarSessaoDoUsuario(UsuarioModel usuario);
         void RemoverSessaoUsuario();
