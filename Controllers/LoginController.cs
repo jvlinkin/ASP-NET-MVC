@@ -71,6 +71,47 @@ namespace ControleDeContatos.Controllers
             }
 
         }
+        [HttpPost] IActionResult EnviarLinkParaRedefinirSenha(RedefinirSenhaModel redefinirSenhaModel)
+        {
+
+            try
+            {
+                //Verificando se os campos da model estão preenchidos. 
+
+                if (ModelState.IsValid)
+                
+                {
+                    UsuarioModel user = _usuarioRepositorio.BuscarPorLogin(redefinirSenhaModel.Login);
+                    
+
+                    if (user != null)
+                    {
+                        
+                    }
+
+                    TempData["MensagemErro"] = "Não conseguimos redefinir sua senha. Verifique os dados informados.";
+
+
+                }
+
+                return View("Index");
+
+
+            }
+            catch (Exception erro)
+            {
+
+                TempData["MensagemErro"] = $"Ops, não conseguimos redefinir sua senha. Tente novamente. {erro.Message}";
+                return RedirectToAction("Index");
+            }
+
+        }
+
+
+        public IActionResult RedefinirSenha()
+        {
+            return View();
+        }
 
         public IActionResult Sair()
         {
