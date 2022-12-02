@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ControleDeContatos.Controllers
 {
-    [PaginaParaUsuarioLogado]
+    [PaginaRestritaSomenteAdmin]
 
     public class UsuarioController : Controller
     {
