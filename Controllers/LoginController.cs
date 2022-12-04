@@ -71,7 +71,9 @@ namespace ControleDeContatos.Controllers
             }
 
         }
-        [HttpPost] IActionResult EnviarLinkParaRedefinirSenha(RedefinirSenhaModel redefinirSenhaModel)
+        
+       [HttpPost]
+        public IActionResult EnviarLinkParaRedefinirSenha(RedefinirSenhaModel redefinirSenhaModel)
         {
 
             try
@@ -81,12 +83,14 @@ namespace ControleDeContatos.Controllers
                 if (ModelState.IsValid)
                 
                 {
-                    UsuarioModel user = _usuarioRepositorio.BuscarPorLogin(redefinirSenhaModel.Login);
+                    UsuarioModel user = _usuarioRepositorio.BuscarPorEmailELogin(redefinirSenhaModel.Email, redefinirSenhaModel.Login);
                     
 
                     if (user != null)
                     {
-                        
+                        TempData["MensagemSucesso"] = $"Enviamos para seu e-mail cadastrado, uma nova senha.";
+                        return RedirectToAction("Index", "Login");
+
                     }
 
                     TempData["MensagemErro"] = "Não conseguimos redefinir sua senha. Verifique os dados informados.";
