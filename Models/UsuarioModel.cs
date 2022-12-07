@@ -10,6 +10,7 @@ namespace ControleDeContatos.Models
 {
     public class UsuarioModel
     {
+        
         public int Id { get; set; }
         [Required(ErrorMessage = "Digite o nome do usuário")]
         public string Nome { get; set; }

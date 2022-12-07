@@ -367,6 +367,7 @@ C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeC
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.TagHelpers.input.cache
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.TagHelpers.output.cache
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.RazorCoreGenerate.cache
+C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\AlterarSenha\Index.cshtml.g.cs
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\Contato\ApagarConfirmacao.cshtml.g.cs
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\Contato\Criar.cshtml.g.cs
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\Contato\Editar.cshtml.g.cs
@@ -395,4 +396,3 @@ C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeC
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.pdb
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.genruntimeconfig.cache
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.csproj.AssemblyReference.cache
-C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\AlterarSenha\Index.cshtml.g.cs

@@ -1,4 +1,5 @@
 ﻿using ControleDeContatos.Filters;
+using ControleDeContatos.Helper;
 using ControleDeContatos.Models;
 using ControleDeContatos.Repositório;
 using Microsoft.AspNetCore.Mvc;
@@ -14,14 +15,18 @@ namespace ControleDeContatos.Controllers
     {   
         //Injeção de dependência
         private readonly IContatoRepositório _contatoRepositorio;
-        public ContatoController(IContatoRepositório contatoRepositório)
+        private readonly ISessao _sessao;
+        public ContatoController(IContatoRepositório contatoRepositório,
+                                 ISessao sessao)
         {
             _contatoRepositorio = contatoRepositório;
+            _sessao = sessao;
         }
 
         public IActionResult Index()
         {
-            var contatos = _contatoRepositorio.BuscarTodos();
+            UsuarioModel usuarioLogado = _sessao.BuscarSessaoDoUsuario();
+            var contatos = _contatoRepositorio.BuscarTodos(usuarioLogado.Id);
             return View(contatos);
         }
 
@@ -72,6 +77,8 @@ namespace ControleDeContatos.Controllers
                     return View(contato);
                 }
 
+                UsuarioModel usuarioLogado = _sessao.BuscarSessaoDoUsuario();
+                contato.UsuarioId = usuarioLogado.Id;
                 _contatoRepositorio.Adicionar(contato);
                 TempData["MensagemSucesso"] = "Contato cadastrado com sucesso";
                 return RedirectToAction("Index");
@@ -98,6 +105,8 @@ namespace ControleDeContatos.Controllers
                     return View("Editar", contato);
                 }
 
+                UsuarioModel usuarioLogado = _sessao.BuscarSessaoDoUsuario();
+                contato.Id = usuarioLogado.Id;
                 _contatoRepositorio.Atualizar(contato);
                 TempData["MensagemSucesso"] = "Cadastro atualizado com sucesso.";
                 return RedirectToAction("Index");
