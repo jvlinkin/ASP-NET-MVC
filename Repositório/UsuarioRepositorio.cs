@@ -83,6 +83,39 @@ namespace ControleDeContatos.Repositório
             return true;
         }
 
-        
+        public UsuarioModel AlterarSenha(AlterarSenhaModel alterarSenhaModel)
+        {
+            UsuarioModel user = BuscarPorId(alterarSenhaModel.Id);
+
+            if(user == null)
+            {
+                throw new Exception("Houve um erro na atualização da senha. Usuário não encontrado.");
+            }
+            /*O método SenhaValida, ele compara a senha digitada com a senha atual do usuário no BD. Se válida, ele retorna true,
+            caso não, ele retorna false.*/
+            if (!user.SenhaValida(alterarSenhaModel.SenhaAtual))
+            {
+                throw new Exception("Senha atual não confere.");
+            }
+
+            /*Validando se a senha que o usuário quer utilizar, já não é a mesma do banco.*/
+            if (user.SenhaValida(alterarSenhaModel.NovaSenha)){
+                throw new Exception("Nova senha deve ser diferente da senha atual.");
+            }
+
+            user.SetNovaSenha(alterarSenhaModel.NovaSenha);
+            user.DataAtualizacao = DateTime.Now;
+
+            _bancoContext.Usuarios.Update(user);
+            _bancoContext.SaveChanges();
+            return user;
+
+
+
+
+
+
+
+        }
     }
 }

@@ -394,3 +394,5 @@ C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeC
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.dll
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.pdb
 C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.genruntimeconfig.cache
+C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\ControleDeContatos.csproj.AssemblyReference.cache
+C:\Users\jvlpa\OneDrive\Documentos\ProjetosASPNET\ControleDeContatos\ControleDeContatos\obj\Debug\netcoreapp3.1\Razor\Views\AlterarSenha\Index.cshtml.g.cs
